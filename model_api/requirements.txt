@@ -1,0 +1,6 @@
+flask==2.2.2
+gunicorn==20.1.0
+numpy==1.24.2
+segmentation-models==1.0.1
+tensorflow-cpu==2.11.0
+
