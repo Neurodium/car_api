@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Future Vision Transport</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="title">
+        <h1>Segmentation model</h1>
+    </div>
+    <div class="container">
+        {% for i in range(0, len) %}
+            <div>
+                <a href="{{ urls[i] }}"><img class=img src="{{ url_for('static', filename=images[i]) }}"></a>
+                <div class=text><a href="{{ urls[i] }}">{{ i + 1 }}</a></div>
+            </div>
+        {% endfor %}
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>

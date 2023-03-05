@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Future Vision Transpor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="title">
+        <h1>Segmentation model</h1>
+    </div>
+    <div class="container">
+        <div>
+            <img class=img src="{{ url_for('static', filename=photo) }}">
+            <div class=text>Image Originale</div>
+        </div>
+        <div>
+            <img class=img src="{{ url_for('static', filename=mask) }}">
+            <div class=text>Mask Réel</div>
+        </div>
+        <div>
+            <img class=img src="{{ url_for('static', filename=seg) }}">
+            <div class=text>Mask Prédit</div>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>

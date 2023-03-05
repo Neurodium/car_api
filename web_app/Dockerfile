@@ -4,8 +4,6 @@ FROM python:3.9
 #copy all the files
 COPY . .
 
-ENV SM_FRAMEWORK='tf.keras'
-
 #Install the dependencies
 RUN apt-get -y update
 RUN apt-get update && apt-get install -y python3 python3-pip

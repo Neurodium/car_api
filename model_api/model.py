@@ -21,6 +21,9 @@ img_height, img_width = 256, 256
 
 
 def get_prediction(image_filename):
+    """
+        get segmetned image from image filename
+    """
     image = img_to_array(load_img(image_filename,
                                   target_size=(img_height, img_width))
                          )
