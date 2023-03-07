@@ -4,16 +4,17 @@ from urllib.request import urlopen
 import json
 import os
 from skimage import io
-from helpers import color_prediction, color_mask
+from helpers import color_prediction
+from dotenv import load_dotenv
 
-
+load_dotenv()
 
 app = Flask(__name__)
 
 path_photos = 'static/photos/'
 path_masks = 'static/labels/'
 path_predictions = 'static/predictions/'
-url = 'https://car-predict-23.herokuapp.com/prediction/'
+url = os.getenv('API')
 
 @app.route('/')
 def home():  # homepage of list of images and urls for prediction

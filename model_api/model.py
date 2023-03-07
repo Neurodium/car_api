@@ -18,6 +18,7 @@ model = tf.keras.models.load_model('model/model.h5', custom_objects=custom_obj,
 
 BACKBONE = 'densenet169'
 img_height, img_width = 256, 256
+preprocess_input = sm.get_preprocessing(BACKBONE)
 
 
 def get_prediction(image_filename):
@@ -27,7 +28,6 @@ def get_prediction(image_filename):
     image = img_to_array(load_img(image_filename,
                                   target_size=(img_height, img_width))
                          )
-    preprocess_input = sm.get_preprocessing(BACKBONE)
     image = preprocess_input(image)
     image = image.reshape((1, 256, 256, 3))
     pred = model.predict(image)
